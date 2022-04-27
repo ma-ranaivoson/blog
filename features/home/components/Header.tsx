@@ -11,6 +11,7 @@ import {
   Stack,
   useColorMode,
   Heading,
+  Collapse,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
 import style from '../../../styles/Headers.module.css';
@@ -37,35 +38,38 @@ export default function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-          <IconButton
-            size={'md'}
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label={'Open Menu'}
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-          <HStack spacing={8} alignItems={'center'}>
-            <Box><Heading size='sm' cursor='pointer'>{'<'}Ma <div className={style.emoji} data-hover="👋"></div>😎/{'>'}</Heading></Box>
+    <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+      <Flex maxW={'2xl'} h={16} alignItems={'center'} justifyContent={'space-between'} margin="auto">
+        <IconButton
+          size={'md'}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          aria-label={'Open Menu'}
+          display={{ md: 'none' }}
+          onClick={isOpen ? onClose : onOpen}
+        />
+        <HStack spacing={8} alignItems={'center'}>
+          <Box>
+            <Link className={style.linkReset}>
+              <Heading size='sm' cursor='pointer'>
+                {'<'}Ma <div className={style.emoji} data-hover='👋'></div>😎/
+                {'>'}
+              </Heading>
+            </Link>
+          </Box>
+        </HStack>
+        <Flex alignItems={'center'}>
+          <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
+            {Links.map((link) => (
+              <NavLink key={link}>{link}</NavLink>
+            ))}
           </HStack>
-          <Flex alignItems={'center'}>
-            <HStack
-              as={'nav'}
-              spacing={4}
-              display={{ base: 'none', md: 'flex' }}
-            >
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </HStack>
-            <Button onClick={toggleColorMode}>
-                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-              </Button>
-          </Flex>
+          <Button onClick={toggleColorMode}>
+            {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Flex>
+      </Flex>
 
+      <Collapse in={isOpen} animateOpacity>
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
@@ -75,7 +79,7 @@ export default function Header() {
             </Stack>
           </Box>
         ) : null}
-      </Box>
-    </>
+      </Collapse>
+    </Box>
   );
 }

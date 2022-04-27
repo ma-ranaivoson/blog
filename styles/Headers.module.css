@@ -10,6 +10,17 @@
   transform-origin: 70% 70%;
 }
 
+.linkReset {
+  display: inline-block;
+}
+
+.linkReset:hover {
+  text-decoration: none !important;
+  transform: scale(1.2);
+  transition: transform ease-in-out 500ms;
+}
+
+
 @keyframes wave-animation {
   0% {
     transform: rotate(0deg);
