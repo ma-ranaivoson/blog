@@ -1,0 +1,84 @@
+{
+  "type": ["Frontend", "Backend", "Devops", "Tools"],
+  "programmingLanguage": [
+    {
+      "name": "JavaScript",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902"
+    },
+    {
+      "name": "PHP",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/711px-PHP-logo.svg.png?20180502235434"
+    },
+    {
+      "name": "Tools",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/711px-PHP-logo.svg.png?20180502235434"
+    }
+  ],
+  "recent": [
+    {
+      "name": "TypeScript",
+      "type": "Frontend",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/512px-Typescript_logo_2020.svg.png"
+    },
+    {
+      "name": "PHP",
+      "type": "Backend",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/711px-PHP-logo.svg.png?20180502235434"
+    },
+    {
+      "name": "React Native",
+      "type": "Frontend",
+      "image": "https://d33wubrfki0l68.cloudfront.net/554c3b0e09cf167f0281fda839a5433f2040b349/ecfc9/img/header_logo.svg"
+    },
+    {
+      "name": "Styled Components",
+      "type": "Frontend",
+      "image": "https://styled-components.com/logo.png"
+    },
+    {
+      "name": "GitHub actions",
+      "type": "Devops",
+      "image": "https://avatars.githubusercontent.com/u/44036562?s=200&v=4"
+    },
+    {
+      "name": "React Native Paper",
+      "type": "Frontend",
+      "image": "https://pbs.twimg.com/profile_images/1197491571849084933/HAwtsa-i_400x400.jpg"
+    },
+    {
+      "name": "Symfony",
+      "type": "Backend",
+      "image": "https://seeklogo.com/images/S/symfony-logo-AA34C8FC16-seeklogo.com.png"
+    },
+    {
+      "name": "API Platform",
+      "type": "Backend",
+      "image": "https://api-platform.com/static/74e20e175f4d908bbc0f1e2af28d3d66/Logo_Circle%20webby%20blue.svg"
+    },
+    {
+      "name": "Docker",
+      "type": "Devops",
+      "image": "https://marvel-b1-cdn.bc0a.com/f00000000152152/www.zend.com/sites/default/files/image/2019-09/logo-docker.jpg"
+    },
+    {
+      "name": "MySql",
+      "type": "Backend",
+      "image": "https://community.jaguar-network.com/wp-content/uploads/2017/06/mysql-1-696x456.jpg.webp"
+    },
+    {
+      "name": "Docker compose",
+      "type": "Devops",
+      "image": "https://www.seekpng.com/png/detail/525-5256723_docker-compose-logo.png"
+    },
+    {
+      "name": "Firebase",
+      "type": "Tools",
+      "image": "https://www.gstatic.com/devrel-devsite/prod/vcf74735f7c06cd017eb0bfd91ed83c965bdd5f0cbef3dc678f0e1f5f31be7e67/firebase/images/touchicon-180.png"
+    },
+    {
+      "name": "Amazon Web Services",
+      "type": "Tools",
+      "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png"
+    }
+  ]
+}
