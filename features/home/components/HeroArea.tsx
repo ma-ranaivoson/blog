@@ -56,16 +56,36 @@ function HeroArea() {
         </Text>
         <Flex flexDir={{ base: 'column', md: 'row' }} w="100%" flexWrap="wrap">
           {data.type.map((type, i) => {
-            const { isOpen, onToggle } = useDisclosure();
+            const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: true });
 
             return (
               // eslint-disable-next-line react/no-array-index-key
-              <Box w={{ base: '100%', md: '50%' }} p="1" key={`${type}-${i}`}>
+              <Box w={{ base: '100%', md: '50%' }} p="1" key={`${type.length}-${i + 100}`}>
                 <Button onClick={onToggle} w="100%">{type}</Button>
                 <Collapse in={isOpen} animateOpacity>
                   { data.recent
                     .filter((filteredData) => filteredData.type === type)
-                    .map((d) => <BadgeTech name={d.name} image={d.image} />)}
+                    .map((d) => <BadgeTech name={d.name} image={d.image} key={`${d.name}+${d.image}`} />)}
+                </Collapse>
+              </Box>
+            );
+          })}
+        </Flex>
+        <Text margin="auto">
+          Also proficient in:
+        </Text>
+        <Flex flexDir={{ base: 'column', md: 'row' }} w="100%" flexWrap="wrap">
+          {data.type.filter((elem) => elem !== 'Devops').map((type, i) => {
+            const { isOpen, onToggle } = useDisclosure({ defaultIsOpen: true });
+
+            return (
+              // eslint-disable-next-line react/no-array-index-key
+              <Box w={{ base: '100%', md: '50%' }} p="1" key={`${type.length}-${i + 100}`}>
+                <Button onClick={onToggle} w="100%">{type}</Button>
+                <Collapse in={isOpen} animateOpacity>
+                  { data.skills
+                    .filter((filteredData) => filteredData.type === type)
+                    .map((d) => <BadgeTech name={d.name} image={d.image} key={`${d.name}+${d.image}`} />)}
                 </Collapse>
               </Box>
             );
