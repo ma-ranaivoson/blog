@@ -16,7 +16,7 @@ import {
 import {
   HamburgerIcon, CloseIcon, MoonIcon, SunIcon,
 } from '@chakra-ui/icons';
-import style from '../../../styles/Headers.module.css';
+import style from '../styles/Headers.module.css';
 
 const Links = ['Home', 'Blog'];
 

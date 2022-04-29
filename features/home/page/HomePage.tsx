@@ -1,14 +1,24 @@
-import { Box } from '@chakra-ui/react';
-import Header from '../components/Header';
-import HeroArea from '../components/HeroArea';
+import {
+  Center, Flex, Heading, Stack, Box,
+} from '@chakra-ui/react';
+import AboutMe from '../components/AboutMe';
+import MySkills from '../components/MySkills';
 
+// eslint-disable-next-line max-len
 export default function HomePage() {
   return (
-    <>
-      <Header />
-      <Box p={4}>
-        <HeroArea />
-      </Box>
-    </>
+    <Box p={4}>
+      <Flex justifyContent="center" maxW="2xl" margin="auto">
+        <Stack spacing={2}>
+          <Heading as="h2">
+            <Center>
+              Hi there!!!
+            </Center>
+          </Heading>
+          <AboutMe />
+          <MySkills />
+        </Stack>
+      </Flex>
+    </Box>
   );
 }

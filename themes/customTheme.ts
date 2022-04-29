@@ -13,7 +13,7 @@ export const customTheme = extendTheme({
     },
   },
   config: {
-    useSystemColorMode: true,
+    useSystemColorMode: false,
     initialColorMode: 'dark',
   },
 });

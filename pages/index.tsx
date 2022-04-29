@@ -1,7 +1,18 @@
+import { GetStaticPropsContext, InferGetServerSidePropsType } from 'next';
 import { HomePage } from '../features';
 
-function Home() {
-  return <HomePage />;
+type Data = {
+  message: string;
 }
 
-export default Home;
+export async function getServerSideProps(context: GetStaticPropsContext) {
+  return {
+    props: {
+      message: 'Hello',
+    },
+  };
+}
+
+export default function Home({ message }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  return <HomePage />;
+}
