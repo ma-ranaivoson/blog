@@ -1,8 +1,8 @@
 import {
-  Center, Flex, Heading, Stack, Box,
+  Center, Flex, Box, Stack, Heading,
 } from '@chakra-ui/react';
-import AboutMe from '../components/AboutMe';
-import MySkills from '../components/MySkills';
+import AboutMe from './components/AboutMe';
+import MySkills from './components/MySkills';
 
 // eslint-disable-next-line max-len
 export default function HomePage() {

@@ -1,4 +1,4 @@
-import HomePage from './home/page/HomePage';
+import HomePage from './home';
 
 // eslint-disable-next-line import/prefer-default-export
 export { HomePage };
