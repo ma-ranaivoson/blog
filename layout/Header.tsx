@@ -18,9 +18,7 @@ import {
 } from '@chakra-ui/icons';
 import style from '../styles/Headers.module.css';
 
-const Links = ['Home', 'Blog'];
-
-function NavLink({ children }: { children: ReactNode }) {
+function NavLink({ children, href }: { children: ReactNode, href: string }) {
   return (
     <Link
       px={2}
@@ -30,7 +28,7 @@ function NavLink({ children }: { children: ReactNode }) {
         textDecoration: 'none',
         bg: useColorModeValue('gray.200', 'gray.700'),
       }}
-      href="/"
+      href={href}
     >
       {children}
     </Link>
@@ -73,9 +71,8 @@ export default function Header() {
         </HStack>
         <Flex alignItems="center">
           <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
-            {Links.map((link) => (
-              <NavLink key={link}>{link}</NavLink>
-            ))}
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
           </HStack>
           <Button onClick={toggleColorMode}>
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
@@ -87,9 +84,8 @@ export default function Header() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as="nav" spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <NavLink href="/">Home</NavLink>
+              <NavLink href="/blog">Blog</NavLink>
             </Stack>
           </Box>
         ) : null}

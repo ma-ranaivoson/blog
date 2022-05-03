@@ -1,6 +1,6 @@
 import formatDate from '../utils/formatDate';
 
-type formatedDateType = {
+export type formatedDateType = {
   date: string | undefined;
   count: number;
 };
@@ -47,10 +47,20 @@ function toCalendarHeatmapFormat(
 export default async function getContribution() {
   const res1 = await fetch(
     'https://api.github.com/user/55329621/events?page=1',
+    {
+      headers: {
+        Authorization: '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',
+      },
+    },
   );
   const data1 = await res1.json();
   const res2 = await fetch(
     'https://api.github.com/user/55329621/events?page=2',
+    {
+      headers: {
+        Authorization: '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',
+      },
+    },
   );
   const data2 = await res2.json();
 

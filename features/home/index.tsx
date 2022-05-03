@@ -2,10 +2,15 @@ import {
   Center, Flex, Box, Stack, Heading,
 } from '@chakra-ui/react';
 import AboutMe from './components/AboutMe';
+import MyContributions from './components/MyContributions';
 import MySkills from './components/MySkills';
 
+interface HomePageProps {
+  contributions: unknown
+}
+
 // eslint-disable-next-line max-len
-export default function HomePage() {
+export default function HomePage({ contributions }: HomePageProps) {
   return (
     <Box p={4}>
       <Flex justifyContent="center" maxW="2xl" margin="auto">
@@ -17,6 +22,7 @@ export default function HomePage() {
           </Heading>
           <AboutMe />
           <MySkills />
+          <MyContributions contributions={contributions} />
         </Stack>
       </Flex>
     </Box>
