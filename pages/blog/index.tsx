@@ -1,5 +1,9 @@
-import { Text } from '@chakra-ui/react';
+import { Text, Box } from '@chakra-ui/react';
 
 export default function Blog() {
-  return <Text>Coming soon</Text>;
+  return (
+    <Box minH="50%">
+      <Text>Coming soon</Text>
+    </Box>
+  );
 }
