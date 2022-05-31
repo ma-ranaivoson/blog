@@ -16,7 +16,7 @@ import {
 import {
   HamburgerIcon, CloseIcon, MoonIcon, SunIcon,
 } from '@chakra-ui/icons';
-import style from '../styles/Headers.module.css';
+import style from '../../styles/Headers.module.css';
 
 function NavLink({ children, href }: { children: ReactNode, href: string }) {
   return (
@@ -70,7 +70,7 @@ export default function Header() {
           </Box>
         </HStack>
         <Flex alignItems="center">
-          <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
+          <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }} mr="10px">
             <NavLink href="/">Home</NavLink>
             <NavLink href="/blog">Blog</NavLink>
           </HStack>

@@ -25,6 +25,5 @@ export default function AboutMe() {
         knowledge is power.
       </Text>
     </>
-
   );
 }

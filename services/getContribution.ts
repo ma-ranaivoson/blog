@@ -12,7 +12,7 @@ interface dataType {
 function toCalendarHeatmapFormat(
   data: dataType[],
   arr: formatedDateType[],
-): any {
+): formatedDateType[] {
   const formatedDates: formatedDateType[] = [...arr];
 
   if (data.length === 0) {
